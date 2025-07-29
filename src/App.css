@@ -1,0 +1,329 @@
+/* Apenas CSS abaixo. Removido código Node.js. */
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 400px;
+  margin: 0 auto;
+  background: #f9f9f9;
+  padding: 18px;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+.contact-form label {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+.contact-form input,
+.contact-form textarea {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1em;
+  resize: vertical;
+}
+.contact-form button {
+  background: #0077cc;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 0;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.contact-form button:hover {
+  background: #005fa3;
+}
+@media (max-width: 600px) {
+  .contact-form {
+    padding: 10px;
+    border-radius: 6px;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.98em;
+  }
+}
+.project-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  padding: 18px;
+  margin-bottom: 20px;
+  transition: box-shadow 0.2s, transform 0.2s;
+  border: 1px solid #eaeaea;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.project-card:hover {
+  box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+  transform: translateY(-2px) scale(1.02);
+}
+.project-card .project-img {
+  margin-bottom: 12px;
+}
+.project-card strong {
+  font-size: 1.1em;
+  color: #0077cc;
+}
+@media (max-width: 600px) {
+  .project-card {
+    padding: 12px;
+    margin-bottom: 14px;
+    border-radius: 8px;
+  }
+}
+.projects-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.projects-list li {
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  padding: 12px;
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.2s;
+}
+.projects-list li:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+.project-img {
+  width: 120px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+.projects-list a {
+  color: inherit;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.projects-list strong {
+  font-size: 1.05em;
+}
+@media (max-width: 600px) {
+  .projects-list {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .projects-list li {
+    width: 100%;
+    padding: 10px;
+  }
+  .project-img {
+    width: 100px;
+    height: 66px;
+  }
+}
+.resume-links {
+  margin: 10px 0 18px 0;
+}
+.resume-links a {
+  color: #0077cc;
+  text-decoration: none;
+  margin-right: 10px;
+  font-weight: bold;
+}
+.resume-links a:last-child {
+  margin-right: 0;
+}
+.resume-links a:hover {
+  text-decoration: underline;
+}
+@media (max-width: 600px) {
+  .resume-links {
+    margin: 8px 0 14px 0;
+    font-size: 0.98em;
+  }
+}
+.resume-section {
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+.resume-section h2 {
+  margin-bottom: 12px;
+}
+.resume-contact {
+  margin-bottom: 12px;
+  font-size: 1.05em;
+}
+.resume-section h3 {
+  margin-top: 20px;
+  margin-bottom: 8px;
+  font-size: 1.1em;
+}
+.resume-section ul {
+  padding-left: 20px;
+  margin-bottom: 12px;
+}
+.resume-section li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+@media (max-width: 600px) {
+  .resume-section {
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+  .resume-section h2 {
+    font-size: 1.2em;
+  }
+  .resume-contact {
+    font-size: 0.98em;
+  }
+  .resume-section h3 {
+    font-size: 1em;
+  }
+  .resume-section ul {
+    padding-left: 12px;
+  }
+  .resume-section li {
+    font-size: 0.98em;
+    margin-bottom: 6px;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f5f5;
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+  background: #181818;
+  color: #eaeaea;
+}
+
+body.dark-mode a,
+body.dark-mode .resume-links a,
+body.dark-mode .contact-section a {
+  color: #4fc3f7;
+}
+
+body.dark-mode .project-card {
+  background: #232323;
+  color: #eaeaea;
+  border: 1px solid #333;
+}
+
+body.dark-mode .project-card strong {
+  color: #4fc3f7;
+}
+
+body.dark-mode .project-card div {
+  color: #eaeaea;
+}
+
+
+body.dark-mode .project-img {
+  border: 1px solid #333;
+}
+
+body.dark-mode .contact-form {
+  background: #232323;
+  color: #eaeaea;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.18);
+}
+
+body.dark-mode .about-section p,
+body.dark-mode .resume-section p,
+body.dark-mode .resume-section li,
+body.dark-mode .projects-section li {
+  color: #eaeaea;
+}
+
+
+.dark-mode .portfolio-container {
+  background: #232323;
+  color: #eaeaea;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+}
+
+.portfolio-container {
+  max-width: 800px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.about-section h1 {
+  margin-bottom: 8px;
+}
+.about-section p {
+  color: #333;
+}
+
+.projects-section {
+  margin-top: 32px;
+}
+.projects-section h2 {
+  margin-bottom: 8px;
+}
+.projects-section ul {
+  padding-left: 20px;
+}
+.projects-section li {
+  margin-bottom: 6px;
+}
+
+.contact-section {
+  margin-top: 32px;
+}
+.contact-section h2 {
+  margin-bottom: 8px;
+}
+.contact-section a {
+  color: #0077cc;
+  text-decoration: none;
+}
+.contact-section a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .portfolio-container {
+    max-width: 100vw;
+    margin: 0;
+    padding: 8px;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .about-section h1,
+  .projects-section h2,
+  .contact-section h2 {
+    font-size: 1.1em;
+    text-align: left;
+  }
+  .about-section p,
+  .projects-section li,
+  .contact-section p {
+    font-size: 0.98em;
+    line-height: 1.5;
+  }
+  .projects-section ul {
+    padding-left: 12px;
+  }
+  .projects-section,
+  .contact-section {
+    margin-top: 20px;
+  }
+}
+
